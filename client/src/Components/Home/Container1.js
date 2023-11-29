@@ -6,7 +6,7 @@ function Container1() {
         <div className="container1">
             <div className="con1-row">
                 <div className="con1-col1" id="con1">
-                    <h1>WELCOME TO FARMERS PORTAL</h1>
+                    <h1>WELCOME TO AgriConnect</h1>
                     <p>Join the portal and learn the professional way of farming</p>
                 </div>
                 <div className="con1-col2" id="con1">

@@ -29,7 +29,7 @@ const NavBar = (props) => {
                 <p>
                     <img id="farmer-logo" src='/logo1.jpg' alt="Logo" />
                 </p>
-                <h1><Link to="/" className="title">Farmers Web Portal</Link></h1>
+                <h1><Link to="/" className="title">AgriConnect</Link></h1>
             </div>
             <div className="nav">
                 <input type="checkbox" id="check" />
