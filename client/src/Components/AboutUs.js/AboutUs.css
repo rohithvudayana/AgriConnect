@@ -8,6 +8,9 @@
 
 .AboutUs_body {
     background-color: antiquewhite;
+    height: 93vh;
+    position: relative;
+    top: 7vh;
 }
 
 .about_main_div{
@@ -17,7 +20,7 @@
 
 .section {
     width: 100%;
-    min-height:90vh;
+    /* min-height:90vh; */
     background-color: antiquewhite;
 }
 
@@ -25,17 +28,17 @@
     width: 80%;
     display: block;
     margin: auto;
-    padding-top: 100px;
+    /* padding-top: 100px; */
 }
 
 .content-section {
     float: left;
-    width: 55%;
+    width: 60%;
 }
 
 .image-section {
     float: right;
-    width: 40%;
+    width: 38%;
 }
 
 .image-section img {

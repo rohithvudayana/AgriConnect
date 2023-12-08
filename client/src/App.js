@@ -16,7 +16,6 @@ import Signuppage from './Components/Signup/Signuppage';
 import Loginpage from './Components/Login/Loginpage';
 import CropPage from './Components/CropPage/CropPage'
 import Discussions from './Components/Discussions/Discussions';
-import ChatBot from './Components/ChatBot/ChatBot';
 import SearchResults from './Components/Market/SearchResults';
 import AdminPortal from './Components/AdminPortal/AdminPortal';
 import Dashboard from './Components/Dashboard/Dashboard';
@@ -64,7 +63,6 @@ function App() {
         <NavBar username={username}></NavBar>
         <Routes>
           <Route exact path='/' element={<Homepage />}></Route>
-          <Route exact path='/ChatBot' element={<ChatBot />}></Route>
           <Route exact path='/Aboutus' element={<AboutUs />}></Route>
           <Route exact path='/Cart' element={localStorage.getItem('email') ? <Cart/> :  <h1 style={{position:"relative",top:"10vh"}}>Please log in</h1>}></Route>
           <Route exact path='/transaction' element={buyDetails && <TransactionStatus data={buyDetails} />}></Route>
@@ -75,9 +73,11 @@ function App() {
           <Route exact path='/search/fertilizers/' element={prod_data && <Market data={prod_data.filter(x => x.category === "fertilizers")} />}></Route>
           <Route exact path='/search/seeds/' element={prod_data && <Market data={prod_data.filter(x => x.category === "seeds")} />}></Route>
           <Route exact path='/search/pesticides/' element={prod_data && <Market data={prod_data.filter(x => x.category === "pesticides")} />}></Route>
-          <Route exact path='/Market' element={localStorage.getItem('email') ? <Market data={prod_data.sort(() => Math.random() - 0.5).slice(0, 11)} /> :  <h1 style={{position:"relative",top:"10vh"}}>Please log in</h1>}></Route>
+          <Route exact path='/Market' element={<Market data={prod_data.sort(() => Math.random() - 0.5).slice(0, 11)} />}></Route>
+          {/* <Route exact path='/Market' element={localStorage.getItem('email') ? <Market data={prod_data.sort(() => Math.random() - 0.5).slice(0, 11)} /> :  <h1 style={{position:"relative",top:"10vh"}}>Please log in</h1>}></Route> */}
           <Route exact path='/CropSuggestion' element={<CropSuggestion onSearch={CropSuggestionHistoryHandler} />}></Route>
-          <Route exact path='/discussions' element={localStorage.getItem('email') ? <Discussions /> : <h1 style={{position:"relative",top:"10vh"}}>Please log in</h1>}></Route>
+          {/* <Route exact path='/discussions' element={localStorage.getItem('email') ? <Discussions /> : <h1 style={{position:"relative",top:"10vh"}}>Please log in</h1>}></Route> */}
+          <Route exact path='/discussions' element={<Discussions />}></Route>
           <Route exact path='/login' element={<Loginpage onUserLogin={onUserLogin}/>}></Route>
           <Route exact path='/signup' element={<Signuppage onUserLogin={onUserLogin}/>}></Route>
           <Route exact path='/adminportal' element={<AdminPortal data={prod_data} products={prod_data}/>}></Route>

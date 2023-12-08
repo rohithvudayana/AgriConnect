@@ -42,7 +42,6 @@ const NavBar = (props) => {
                 <ul>
                     <li><Link to="/CropSuggestion" className="nav-element CropSuggestion">Crops</Link></li>
                     <li><Link to="/discussions" className="nav-element discussions">Discussions</Link></li>
-                    <li><Link to="/ChatBot" className="nav-element ChatBot">Chat Bot</Link></li>
                     <li><Link to="/Market" className="nav-element Market">Market</Link></li>
                     <li><Link to="/Aboutus" className="nav-element Aboutuss">About Us</Link></li>
                     {/* <li><Link to="/login" id="loginUser" className="nav-element">{props.username}</Link></li> */}
@@ -50,7 +49,7 @@ const NavBar = (props) => {
                         <li><Link to="/login" id="loginUser" className="nav-element">Guest</Link></li>
                     }
                     {username &&
-                        <li><Link to="/login" id="loginUser" className="nav-element">{username.slice(0,6).toUpperCase()}</Link></li>
+                        <li><Link to="/login" id="loginUser" className="nav-element">{username.slice(0,5).toUpperCase()}</Link></li>
                     }
                 </ul>
             </div>

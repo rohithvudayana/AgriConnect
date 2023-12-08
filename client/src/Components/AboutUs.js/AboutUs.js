@@ -34,8 +34,7 @@ function AboutUs() {
                                     which are required at a very minimal price. machinery, seeds,
                                     fertilizers, pesticides are some of the basic examples. <br />
                                     For Better Services Farmers needs to login in to website for
-                                    more assistance.<br />
-                                    Lastly, the Chatbot which helps the users for instant help.
+                                    more assistance.
                                 </p>
                             </div>
 

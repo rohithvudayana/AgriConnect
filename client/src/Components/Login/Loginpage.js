@@ -5,12 +5,13 @@ import { useNavigate } from "react-router-dom";
 
 const SignUp = (props) => {
   const navigate = useNavigate()
-  const [details, setDetails] = useState({})
+  const [details, setDetails] = useState({email:"guest@gmail.com",password:"12345678"})
 
   useEffect(()=>{
     if(localStorage.getItem('email')){
       navigate('/dashboard')
     }
+    // localStorage.setItem('email', "guest@gmail.com")
   },[])
 
   const handleChange = (e) => {
